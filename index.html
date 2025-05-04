@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS Generator</title>
+    <style>
+        /* Keep previous CSS styles */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+        </select>
+
+        <select id="voice">
+            <option value="alloy">Alloy</option>
+            <option value="echo">Echo</option>
+            <option value="fable">Fable</option>
+            <option value="onyx">Onyx</option>
+            <option value="nova">Nova</option>
+            <option value="shimmer">Shimmer</option>
+            <option value="coral" selected>Coral</option>
+        </select>
+
+        <textarea id="input" placeholder="Enter text in target language..."></textarea>
+        <textarea id="instructions" placeholder="Voice instructions (optional)..."></textarea>
+
+        <div class="controls">
+            <button onclick="generateAudio()">Generate & Play</button>
+            <button onclick="stopAudio()" id="stopBtn" disabled>Stop</button>
+            <button onclick="downloadAudio()" id="downloadBtn" disabled>Download</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
